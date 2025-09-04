@@ -14,7 +14,7 @@ int f2(int x) {
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        cout << "Usage: ./f1 <number>" << endl;
+        cout << "Usage: ./f2 <number>" << endl;
         return 1;
     }
     int n = stoi(argv[1]);
