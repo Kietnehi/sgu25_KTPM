@@ -1,7 +1,9 @@
 
 # sgu25_KTPM
 
-![Kiểm thử phần mềm](KTPM.png)
+<p align="center">
+  <img src="KTPM.png" alt="Kiểm thử phần mềm" width="600">
+</p>
 
 **Tác giả:** Trương Phú Kiệt (MSSV: 3122411109)
 
@@ -11,7 +13,7 @@
 
 **Giảng viên hướng dẫn:** TS. Đỗ Như Tài
 
-**Ngày cập nhật:** 22/10/2025
+
 
 ## Mục lục
 
