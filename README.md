@@ -23,8 +23,6 @@
 - [Hướng dẫn chạy & biên dịch](#hướng-dẫn-chạy--biên-dịch)
 - [Chiến lược kiểm thử đề xuất](#chiến-lược-kiểm-thử-đề-xuất)
 - [Checklist nộp báo cáo & mã](#checklist-nộp-báo-cáo--mã)
-- [Gợi ý mở rộng](#gợi-ý-mở-rộng)
-- [Liên hệ](#liên-hệ)
 
 ## Tổng quan
 
