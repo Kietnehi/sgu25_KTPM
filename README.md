@@ -1,251 +1,688 @@
 
-# sgu25_KTPM
+# 🧪 sgu25_KTPM — Repository Kiểm Thử Phần Mềm
 
-<p align="center">
-  <img src="KTPM.png" alt="Kiểm thử phần mềm" width="600">
+<p align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+  <img src="KTPM.png" alt="Kiểm thử phần mềm" height="200" style="object-fit: contain; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.15);">
+  <img src="sgu.png" alt="Trường Đại học Sài Gòn" height="200" style="object-fit: contain; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.15);">
 </p>
 
-**Tác giả:** Trương Phú Kiệt (MSSV: 3122411109)
-
-**Trường:** Trường Đại học Sài Gòn
-
-**Môn học:** Kiểm thử phần mềm
-
-**Giảng viên hướng dẫn:** TS. Đỗ Như Tài
 
 
+<p align="center">
+  <a href="https://img.shields.io/badge/status-active-brightgreen">
+    <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status: active">
+  </a>
+  <a href="https://img.shields.io/badge/semester-2025-blue">
+    <img src="https://img.shields.io/badge/semester-2025-blue" alt="Semester 2025">
+  </a>
+  <a href="https://img.shields.io/badge/license-MIT-informational">
+    <img src="https://img.shields.io/badge/license-MIT-informational" alt="License: MIT">
+  </a>
+</p>
 
-## Mục lục
+---
 
-- [Tổng quan](#tổng-quan)
-- [Cấu trúc thư mục](#cấu-trúc-thư-mục)
-- [Nội dung chi tiết](#nội-dung-chi-tiết)
-- [Hướng dẫn chạy & biên dịch](#hướng-dẫn-chạy--biên-dịch)
-- [Chiến lược kiểm thử đề xuất](#chiến-lược-kiểm-thử-đề-xuất)
-- [Checklist nộp báo cáo & mã](#checklist-nộp-báo-cáo--mã)
+## 👨‍🎓 Thông tin
+- **Tác giả:** Trương Phú Kiệt  
+- **MSSV:** 3122411109  
+- **Trường:** Trường Đại học Sài Gòn (SGU)  
+- **Môn học:** Kiểm thử phần mềm (Software Testing)  
+- **Giảng viên hướng dẫn:** TS. Đỗ Như Tài  
+- **Năm học:** 2025
 
-## Tổng quan
+---
 
-Kho lưu trữ `sgu25_KTPM` chứa toàn bộ tài liệu, thiết kế, kế hoạch kiểm thử và mã nguồn cho môn Kiểm thử phần mềm do Trương Phú Kiệt thực hiện. Mục tiêu của repository là tập trung các artefact phục vụ:
+## 🧩 Giới thiệu
+Repository phục vụ môn **Kiểm thử phần mềm**, lưu trữ:
+- Bài tập, lab và ví dụ minh họa về kiểm thử.
+- Mã nguồn test (unit, integration, E2E) và báo cáo kết quả.
+- Tài liệu, quy ước và checklist test.
 
-- Lập kế hoạch kiểm thử (Test Plan) và tài liệu liên quan.
-- Thiết kế hệ thống (biểu đồ draw.io, mô hình khái niệm).
-- Thực hiện các bài lab, mã mẫu (C++), và notebook minh họa.
+---
 
-## Cấu trúc thư mục
+## 📚 Mục lục
 
-Root/ (gốc repo)
+- [Tổng quan](#-tổng-quan)
+- [Cấu trúc thư mục](#-cấu-trúc-thư-mục)
+- [Nội dung chi tiết](#-nội-dung-chi-tiết)
+  - [Đề tài chính](#1-đề-tài-chính-detai)
+  - [Bài tập Lab](#2-bài-tập-lab)
+  - [Bài tập lý thuyết](#3-bài-tập-lý-thuyết)
+- [Môi trường phát triển](#️-môi-trường-phát-triển)
+- [Hướng dẫn sử dụng](#-hướng-dẫn-sử-dụng)
+- [Chiến lược kiểm thử](#-chiến-lược-kiểm-thử)
+- [Checklist nộp bài](#-checklist-nộp-bài)
+- [Liên hệ](#-liên-hệ)
 
-- `README.md` — (file này) hướng dẫn chi tiết toàn repo.
-- `DeTai/` — chứa đề tài chính và các artefact cho giai đoạn 1.
-  - `DeTai_GiaiDoan1/` — tài liệu giai đoạn 1:
-			- `Business_Process_FOG.drawio` — sơ đồ quy trình nghiệp vụ.
-			- `conceptual_model_final.drawio` — mô hình khái niệm / ERD / mô hình dữ liệu.
-			- `ScreenDesign.drawio` — thiết kế màn hình (UI mockups).
-			- `Test_Plan_Template.dotx` — mẫu Test Plan (Word template).
-			- `trình bày word.txt` — ghi chú/đề cương trình bày nội dung báo cáo.
-- `DeTai01/`, `DeTai02/` — các tài liệu đề tài phụ (drawio, ghi chú).
-- `lab1/` — chứa mã nguồn và notebook cho Lab 1.
-  - `baia.cpp`, `baib.cpp`, `baic.cpp`, `baid.cpp`, `baie.cpp` — các bài tập C++.
-  - `bai2_2.cpp`, `bai2_3.cpp` — các bài nhỏ hơn trong lab 1.
-  - `tempCodeRunnerFile.cpp` — file tạm do trình biên tập tự tạo.
-  - `baia.ipynb`, `baib.ipynb`, `baic.ipynb`, `baid.ipynb`, `baie.ipynb` — Jupyter notebooks liên quan (ví dụ minh họa, test case, output mẫu).
-- `Lab2/`, `Lab3/`, `Lab4/`, `Lab5/` — chứa các bài tập/lab tương ứng; file drawio minh họa cho Lab2 và Lab3.
+---
 
-## Nội dung chi tiết
+## 🎯 Tổng quan
 
-### 1) Tài liệu đề tài (`DeTai/`)
+Repository `sgu25_KTPM` là kho lưu trữ toàn diện các tài liệu, bài tập và đề tài cho môn **Kiểm thử phần mềm**. Nội dung bao gồm:
 
-- **Mục tiêu:** Tập hợp các tài liệu thiết kế, bản mẫu test plan, và ghi chú trình bày để sử dụng trong báo cáo môn học.
-- **Gợi ý sử dụng:**
-  - Mở các file `.drawio` bằng extension Draw.io trong VS Code hoặc bằng trang diagrams.net để chỉnh sửa/ xuất ảnh.
-  - Mở `Test_Plan_Template.dotx` bằng Microsoft Word để sửa và lưu thành `.docx` hoặc `.pdf` khi nộp.
+- ✅ **Đề tài chính**: Phân tích, thiết kế và lập kế hoạch kiểm thử cho một hệ thống phần mềm hoàn chỉnh
+- ✅ **Bài tập Lab**: Thực hành kiểm thử với các kỹ thuật kiểm thử hộp trắng (White-box Testing)
+- ✅ **Tài liệu kiểm thử**: Test Plan, Test Cases, và các báo cáo kiểm thử
+- ✅ **Mã nguồn C++**: Các chương trình mẫu để thực hành kiểm thử
+- ✅ **Sơ đồ thiết kế**: Business Process, Use Case, ERD, UI Mockups (Draw.io)
 
-### 2) Mã nguồn và notebook (`lab1/`)
+---
 
-- Các file `.cpp` là mã nguồn C++ cho các bài lab. Chúng minh họa các khái niệm, input/output, và có thể dùng làm đối tượng kiểm thử (unit test, boundary test, stress test).
-- Các file `.ipynb` chứa hướng dẫn, ví dụ chạy, hoặc ghi chép nghiệm thu kết quả.
+## 📁 Cấu trúc thư mục
 
-## Hướng dẫn chạy & biên dịch
-
-### Môi trường đề xuất
-
-- Hệ điều hành: Windows (cũng có thể dùng WSL trên Windows).
-- Compiler: g++ (MinGW-w64 hoặc tương đương). Có task có sẵn trong workspace sử dụng đường dẫn Dev-Cpp/MinGW64.
-- Python + Jupyter để mở các file notebook (`pip install jupyter`).
-
-### Biên dịch C++ (ví dụ: `baia.cpp`)
-
-Mở terminal (bash). Ví dụ biên dịch và chạy:
-
-```bash
-g++ -std=c++17 -O2 -o lab1/baia.exe lab1/baia.cpp
-./lab1/baia.exe
+```
+sgu25_KTPM/
+│
+├── README.md                          # File hướng dẫn tổng quan (file này)
+├── KTPM.png                          # Logo môn học
+├── test_readme.ipynb                 # Notebook test README
+├── Sơ lược về 4 giai đoạn rã code.docx
+│
+├── DeTai/                            # 📂 Đề tài chính
+│   ├── DeTai_GiaiDoan1/             # Giai đoạn 1: Phân tích & Thiết kế
+│   │   ├── DeTai_GiaiDoan1_TruongPhuKiet_3122411109.docx
+│   │   ├── Business_Process_FOG.drawio        # Sơ đồ quy trình nghiệp vụ
+│   │   ├── conceptual_model_final.drawio      # Mô hình khái niệm/ERD
+│   │   ├── ScreenDesign.drawio                # Thiết kế giao diện
+│   │   ├── ScreenDesign.xlsx                  # Mô tả chi tiết màn hình
+│   │   ├── Test_Plan_Template.dotx            # Mẫu Test Plan
+│   │   ├── UseCase.xlsx                       # Danh sách Use Cases
+│   │   ├── Phan_Tich_Quy_Trinh_Nghiep_Vu.docx
+│   │   ├── CNPM - Bai Tap 1 - Phan Tich Qui Trinh Phan mem.pdf
+│   │   ├── KTPM - Đánh giá đề tài - Sáng 5 - 20251009.pdf
+│   │   └── trình bày word.txt                 # Ghi chú trình bày
+│   │
+│   ├── DeTai01/                     # Đề tài phụ 1: Phân tích
+│   │   ├── DeTai01-Phan tich-TruongPhuKiet-3122411109.docx
+│   │   ├── DeTai01-Phan tich-TruongPhuKiet-3122411109.drawio
+│   │   └── DeTai01-Phan tich-TruongPhuKiet-3122411109.pptx
+│   │
+│   └── DeTai02/                     # Đề tài phụ 2: Thiết kế kiến trúc
+│       └── DeTai_Buoc02_ThietKeKienTruc_TruongPhuKiet-3122411109.docx
+│
+├── lab1/                             # 🧪 Lab 1: Kiểm thử hộp trắng (White-box)
+│   ├── baia.cpp                     # Bài A: Kiểm thử hàm f1() với boundary values
+│   ├── baib.cpp                     # Bài B: Kiểm thử hàm f2() với arguments
+│   ├── baic.cpp                     # Bài C: Kiểm thử dead code
+│   ├── baid.cpp                     # Bài D: Kiểm thử hàm toán học phức tạp
+│   ├── baie.cpp                     # Bài E: Kiểm thử hàm findMax() (có bug)
+│   ├── bai2_2.cpp, bai2_3.cpp      # Các bài tập phụ
+│   ├── *.ipynb                      # Jupyter Notebooks minh họa
+│   ├── *.exe                        # File thực thi (build artifacts)
+│   ├── Lab1_VV_TestCases.docx      # Test Cases cho Lab 1
+│   ├── BaiTap1 - VV - TestCases.pdf
+│   └── TracNghiem1_TRƯƠNG PHÚ KIỆT_3122411109.docx
+│
+├── Lab2/                             # 📐 Lab 2: Phân tích & Thiết kế hệ thống
+│   ├── Lab2_PTTKHT_TruongPhuKiet_3122411109.docx
+│   └── Lab2_PTTKHT_TruongPhuKiet_3122411109.drawio
+│
+├── Lab3/                             # 📊 Lab 3: Use Case & Workflow
+│   ├── BT3_PTTKHT_TruongPhuKiet_3122411109.docx
+│   └── BT3_PTTKHT_TruongPhuKiet_3122411109.drawio
+│
+├── Lab4/                             # 📝 Lab 4: Test Plan Templates
+│   ├── ABC Project Test Plan_0.2-template.doc
+│   ├── ABC Project Test Plan_0.2-template.docx
+│   └── INTERNATIONAL-KIDS.COM DEVELOPMENT PROJECT_Test plan.doc
+│
+├── Lab5/                             # 🔍 Lab 5: Kiểm thử hộp đen & miền tương đương
+│   ├── BT05_KiemThuMienTuongDuong_HoTen_MaSV.doc
+│   ├── Class_exercise_LT.pdf
+│   └── KTPM - Chuong 4 - Kiem thu hop den.pdf
+│
+├── BT06_KiemThuHopDen2_TruongPhuKie_3122411109/  # 📋 Bài tập 6: Kiểm thử hộp đen nâng cao
+│   ├── BT06_01_KiemThuBangQuyetDinh-3.docx      # Decision Table Testing
+│   ├── BT06_02_KiemThuTrangThai_Pairwise.docx   # State Transition & Pairwise
+│   └── BT06_LyThuyet.docx                       # Lý thuyết
+│
+├── BT7_KiemThuQuiTrinh_TruongPhuKiet_3122411109.xlsx  # 📊 Bài tập 7: Kiểm thử quy trình
+│
+└── scripts/                          # 🔧 Scripts tự động hóa
+    └── run_lab1_tests.sh            # Script biên dịch & chạy test tự động
 ```
 
-Hoặc sử dụng task trong VS Code: `C/C++: g++.exe build active file` (task đã cấu hình sử dụng `C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\g++.exe`).
+---
 
-### Mở Jupyter Notebook
+## 📖 Nội dung chi tiết
+
+### 1. Đề tài chính (DeTai/)
+
+#### 🎯 Mục tiêu
+Phát triển một hệ thống phần mềm hoàn chỉnh từ phân tích đến kiểm thử, bao gồm:
+
+#### 📂 DeTai_GiaiDoan1/ - Giai đoạn 1
+
+**Phân tích yêu cầu & Thiết kế hệ thống:**
+
+1. **Business Process** (`Business_Process_FOG.drawio`)
+   - Sơ đồ quy trình nghiệp vụ (Business Workflow)
+   - Mô tả các hoạt động và actors trong hệ thống
+   - Export sang PNG/SVG để đưa vào báo cáo
+
+2. **Conceptual Model** (`conceptual_model_final.drawio`)
+   - Mô hình khái niệm dữ liệu
+   - ERD (Entity-Relationship Diagram)
+   - Data Dictionary và business rules
+
+3. **UI Design** (`ScreenDesign.drawio` + `ScreenDesign.xlsx`)
+   - Mockup giao diện người dùng
+   - Danh sách các màn hình và chức năng
+   - Workflow điều hướng giữa các màn
+
+4. **Use Cases** (`UseCase.xlsx`)
+   - Danh sách các use case
+   - Actors và mô tả chức năng
+   - Traceability matrix
+
+5. **Test Plan** (`Test_Plan_Template.dotx`)
+   - Mẫu kế hoạch kiểm thử chuẩn IEEE 829
+   - Các phần: Scope, Objectives, Resources, Schedule
+   - Test Strategy và Entry/Exit Criteria
+
+**Tài liệu hỗ trợ:**
+- `DeTai_GiaiDoan1_TruongPhuKiet_3122411109.docx`: Báo cáo tổng hợp đầy đủ
+- `Phan_Tich_Quy_Trinh_Nghiep_Vu.docx`: Chi tiết phân tích quy trình
+- `trình bày word.txt`: Đề cương trình bày (Chương 1, 2, 3)
+
+#### 📂 DeTai01/ - Phân tích hệ thống
+- Tài liệu phân tích chi tiết (Word, PowerPoint, Draw.io)
+- Business requirements và system analysis
+
+#### 📂 DeTai02/ - Thiết kế kiến trúc
+- Thiết kế kiến trúc hệ thống
+- Component diagram và deployment diagram
+
+---
+
+### 2. Bài tập Lab
+
+#### 🧪 Lab 1: Kiểm thử hộp trắng (White-box Testing)
+
+**Mục tiêu:** Thực hành các kỹ thuật kiểm thử hộp trắng, bao phủ Statement, Branch, Path Coverage
+
+**Các bài tập:**
+
+| File | Mô tả | Kỹ thuật kiểm thử |
+|------|-------|------------------|
+| `baia.cpp` | Hàm f1(x): if-else đơn giản | Boundary Value Analysis |
+| `baib.cpp` | Hàm f2(x): nested if-else | Branch Coverage |
+| `baic.cpp` | Hàm f2(x): có dead code | Dead Code Detection |
+| `baid.cpp` | Hàm f3(x): toán học phức tạp (log, cos) | Complex Condition Testing |
+| `baie.cpp` | Hàm findMax(): tìm max 3 số (có bug) | Equivalence Partitioning |
+
+**Chi tiết từng bài:**
+
+1. **baia.cpp** - Kiểm thử boundary values
+   ```cpp
+   int f1(int x) {
+       if (x > 10) return 2 * x;
+       else return -x;
+   }
+   ```
+   - Test cases: x = 9, 10, 11 (boundary values)
+   - Kiểm tra điều kiện x > 10
+
+2. **baib.cpp** - Kiểm thử với command-line arguments
+   ```cpp
+   int f2(int x) {
+       if (x > 10) return 2 * x;
+       else if (x > 0) return -x;
+       else return 2 * x;
+   }
+   ```
+   - Nhận input từ argv[1]
+   - Test: x > 10, 0 < x ≤ 10, x ≤ 0
+
+3. **baic.cpp** - Phát hiện dead code
+   ```cpp
+   int f2(int x) {
+       if (x < 10) return 2 * x;
+       else if (x < 2) return -x;  // Dead code!
+       else return 2 * x;
+   }
+   ```
+   - Điều kiện `x < 2` không bao giờ đạt được
+
+4. **baid.cpp** - Kiểm thử hàm toán học
+   ```cpp
+   int f3(int x) {
+       if (log(x*x*cos(x)) < 3*x) return 2*x;
+       else return 2*x;
+   }
+   ```
+   - Test edge cases: x = 0, x = 3
+   - Xử lý NaN, -inf trong log()
+
+5. **baie.cpp** - Tìm lỗi trong hàm findMax()
+   ```cpp
+   int findMax(int num1, int num2, int num3) {
+       int max = 0;  // Bug: khởi tạo = 0!
+       if ((num1 > num2) && (num1 > num3)) max = num1;
+       if ((num2 > num1) && (num2 > num3)) max = num2;
+       if ((num3 > num1) && (num3 > num2)) max = num3;
+       return max;
+   }
+   ```
+   - Bug 1: max khởi tạo = 0 (sai khi tất cả số âm)
+   - Bug 2: Không xử lý trường hợp hai số bằng nhau
+   - Test cases: (-5,-2,-9), (5,5,3), (4,4,4)
+
+**Tài liệu:**
+- `Lab1_VV_TestCases.docx`: Test cases chi tiết
+- `*.ipynb`: Notebooks minh họa kết quả
+
+---
+
+#### 📐 Lab 2: Phân tích & Thiết kế hệ thống
+
+- Phân tích yêu cầu phần mềm
+- Thiết kế kiến trúc và workflow
+- Sơ đồ Draw.io minh họa
+
+---
+
+#### 📊 Lab 3: Use Case & Activity Diagram
+
+- Vẽ Use Case Diagram
+- Activity Diagram
+- Sequence Diagram
+- File `.drawio` và `.docx` báo cáo
+
+---
+
+#### 📝 Lab 4: Test Plan Templates
+
+- Các mẫu Test Plan chuẩn công nghiệp
+- Template từ dự án thực tế
+- Hướng dẫn viết Test Plan theo IEEE 829
+
+---
+
+#### 🔍 Lab 5: Kiểm thử hộp đen (Black-box Testing)
+
+**Nội dung:**
+- Equivalence Partitioning (Phân vùng tương đương)
+- Boundary Value Analysis (Phân tích giá trị biên)
+- Tài liệu lý thuyết: `KTPM - Chuong 4 - Kiem thu hop den.pdf`
+
+---
+
+### 3. Bài tập lý thuyết
+
+#### 📋 BT06: Kiểm thử hộp đen nâng cao
+
+1. **Decision Table Testing** (`BT06_01_KiemThuBangQuyetDinh-3.docx`)
+   - Bảng quyết định
+   - Test cases từ decision table
+
+2. **State Transition & Pairwise** (`BT06_02_KiemThuTrangThai_Pairwise.docx`)
+   - Kiểm thử chuyển trạng thái
+   - Pairwise testing (All-pairs)
+
+3. **Lý thuyết** (`BT06_LyThuyet.docx`)
+   - Các khái niệm nâng cao
+
+#### 📊 BT07: Kiểm thử quy trình
+
+- File Excel: `BT7_KiemThuQuiTrinh_TruongPhuKiet_3122411109.xlsx`
+- Kiểm thử workflow/process testing
+
+---
+
+## 🛠️ Môi trường phát triển
+
+### Yêu cầu hệ thống
+
+- **OS:** Windows 10/11 (hoặc WSL/Linux)
+- **Compiler:** g++ (MinGW-w64 hoặc GCC)
+  - Đường dẫn hiện tại: `C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\g++.exe`
+- **IDE:** Visual Studio Code
+  - Extension: C/C++, Draw.io Integration
+- **Python:** 3.8+ (cho Jupyter Notebooks)
+  - `pip install jupyter`
+
+### Công cụ hỗ trợ
+
+| Công cụ | Mục đích |
+|---------|----------|
+| Draw.io | Vẽ sơ đồ (Business Process, ERD, UI Mockup) |
+| Microsoft Word | Soạn báo cáo, Test Plan |
+| Microsoft Excel | Use Case, Test Cases, Data Tables |
+| Git Bash / WSL | Chạy scripts tự động |
+| GitHub | Version control |
+
+---
+
+## 🚀 Hướng dẫn sử dụng
+
+### 1. Biên dịch C++ (thủ công)
 
 ```bash
-pip install jupyter  # nếu chưa cài
-jupyter notebook
+# Di chuyển vào thư mục lab1
+cd lab1
+
+# Biên dịch một file
+g++ -std=c++17 -O2 -g -o baia.exe baia.cpp
+
+# Chạy chương trình
+./baia.exe
+
+# Biên dịch với arguments (cho baib.cpp)
+g++ -std=c++17 -O2 -o baib.exe baib.cpp
+./baib.exe 15
 ```
 
-## Chiến lược kiểm thử đề xuất
+### 2. Sử dụng VS Code Task
 
-Phần này đưa ra một chiến lược kiểm thử chi tiết bạn có thể áp dụng cho đề tài:
+1. Mở file C++ trong VS Code
+2. Nhấn `Ctrl+Shift+B` hoặc `Terminal > Run Build Task`
+3. Chọn task: `C/C++: g++.exe build active file`
+4. File `.exe` sẽ được tạo trong cùng thư mục
 
-1. Mục tiêu kiểm thử
-	- Xác minh chức năng chính hoạt động theo yêu cầu (functional testing).
-	- Kiểm thử biên (boundary values), trường hợp bất thường (negative tests), và kiểm thử hiệu năng cơ bản (stress / large input).
+### 3. Script tự động (run_lab1_tests.sh)
 
-2. Phân loại kiểm thử
-	- Kiểm thử chức năng: kiểm tra các hàm tính toán, luồng dữ liệu và tương tác.
-	- Kiểm thử giao diện: kiểm tra mockup UI trong `ScreenDesign.drawio`.
-	- Kiểm thử hệ thống: tích hợp các module (nếu có nhiều file) để đảm bảo luồng xử lý.
-	- Kiểm thử hồi quy: soạn test cases và lưu kết quả để chạy lại khi sửa code.
+**Chức năng:**
+- Tự động biên dịch tất cả file `.cpp` trong `lab1/`
+- Chạy từng chương trình và lưu log
+- Lưu lỗi biên dịch vào `logs/<file>.build.err`
+- Lưu output vào `logs/<file>.log`
 
-3. Test Plan (dùng `Test_Plan_Template.dotx`)
-	- Sử dụng template để điền các phần: scope, mục tiêu, môi trường test, tài nguyên, schedule, test cases, tiêu chí pass/fail.
-
-4. Viết Test Cases (mẫu)
-		- Mỗi test case gồm: ID, tiêu đề, điều kiện tiền đề, input, bước thực hiện, kết quả mong đợi, kết quả thực tế, trạng thái (Pass/Fail).
-		- Ví dụ cho `baia.cpp`:
-			- TC01: Input hợp lệ -> Kết quả đúng.
-			- TC02: Input rỗng / không hợp lệ -> Hệ thống xử lý lỗi (không crash).
-			- TC03: Dữ liệu lớn -> Kiểm tra thời gian/ghi nhận tài nguyên.
-
-5. Công cụ đề xuất
-		- Unit testing: Google Test (gtest) cho C++ nếu muốn tự động hóa test.
-		- CI: GitHub Actions để tự động biên dịch và chạy test khi push.
-		- Static analysis: clang-tidy, cppcheck.
-
-6. Báo cáo lỗi (bug report)
-		- Mẫu báo cáo nên có: Tên bug, mô tả, các bước tái tạo, phiên bản/commit liên quan, môi trường, severity, ảnh chụp màn hình (nếu có).
-
-## Checklist nộp báo cáo & mã
-
-- [ ] Hoàn thiện `Test_Plan` trong `DeTai/DeTai_GiaiDoan1/Test_Plan_Template.dotx`.
-- [ ] Xuất `Test_Plan` thành `.docx` hoặc `.pdf` để nộp.
-- [ ] Kiểm tra và export các file `.drawio` ra `.png`/`.svg` để chèn vào báo cáo.
-- [ ] Chạy tất cả file `.cpp` trong `lab1/` và lưu log/ảnh chụp màn hình đầu ra.
-- [ ] Nếu dùng unit test, đóng gói test và kết quả vào folder `tests/` (có thể tạo mới).
-
-
-
-**Thông tin tác giả:** Trương Phú Kiệt — MSSV: 3122411109
-**Trường:** Trường Đại học Sài Gòn
-**Môn học:** Kiểm thử phần mềm
-**Giảng viên hướng dẫn:** TS. Đỗ Như Tài
-
-Hoàn thành: README đã được chuẩn hóa và tối ưu ban đầu.
-
-## Mô tả chi tiết theo thư mục và file
-
-Để tiện cho việc nộp báo cáo môn Kiểm thử phần mềm, dưới đây là mô tả từng thư mục và những file quan trọng kèm hướng dẫn ngắn về cách dùng/chuẩn bị trước khi nộp.
-
-- `.vscode/`
-	- `settings.json`, `tasks.json`: cấu hình VS Code (task build C++ đã được tạo sẵn). Nếu dùng VS Code, bạn có thể chạy task "C/C++: g++.exe build active file" để biên dịch file đang mở.
-
-- `DeTai/DeTai_GiaiDoan1/`
-	- `DeTai_GiaiDoan1_TruongPhuKiet_3122411109.docx` và `DeTai_GiaiDoan1_HoTen_MaSV.docx`: tài liệu đề tài chính.
-	- `Business_Process_FOG.drawio`: sơ đồ quy trình nghiệp vụ — export sang `.png` để chèn báo cáo.
-	- `conceptual_model_final.drawio`: mô hình khái niệm / ERD — export sang `.png`/`.svg`.
-	- `ScreenDesign.drawio` và `ScreenDesign.xlsx`: mockup giao diện và mô tả chi tiết các màn.
-	- `Test_Plan_Template.dotx`: mẫu Test Plan (Word Template). Mở bằng Microsoft Word, điền thông tin và lưu `Test_Plan.docx` trước khi nộp.
-	- `trình bày word.txt`: ghi chú để soạn phần trình bày.
-
-- `DeTai/DeTai01/`, `DeTai/DeTai02/`:
-	- Thường chứa các slide, file phân tích, hoặc các tài liệu hỗ trợ. Ví dụ `DeTai01-Phan tich...drawio` hay `.pptx`.
-
-- `lab1/` (chi tiết)
-	- `*.cpp` — mã nguồn C++ cho các bài tập. Các file hiện có: `baia.cpp`, `baib.cpp`, `baic.cpp`, `baid.cpp`, `baie.cpp`, `bai2_2.cpp`, `bai2_3.cpp`, `tempCodeRunnerFile.cpp`.
-	- `*.ipynb` — notebook minh họa hoặc ghi chép kết quả (ví dụ: `baia.ipynb`, `baib.ipynb`, ...).
-	- `*.exe` — file thực thi (có thể là kết quả biên dịch trước đó); bạn nên xóa file exe trước khi nộp mã nguồn nếu không muốn đính kèm nhị phân.
-	- `Lab1_VV_TestCases.docx`, `BaiTap1 - VV - TestCases.pdf` — mẫu test cases và tài liệu mô tả test case (dùng để tham khảo, có thể nộp kèm).
-	- `Lab1` chứa luôn `Lab1_VV_TestCases.docx` — đây là nơi ghi test case thủ công (test case, expected outputs).
-
-- `Lab2/`, `Lab3/`, `Lab4/`, `Lab5/`:
-	- Chứa các bài lab khác (drawio, docx, pdf). Ví dụ `Lab2_PTTKHT_TruongPhuKiet_3122411109.drawio` và tương tự.
-
-- `scripts/`
-	- `run_lab1_tests.sh` — script bash để biên dịch và chạy tất cả các file `.cpp` trong `lab1/` và lưu log vào `logs/`. (Script đã thêm, có thể chạy trên Bash/WSL/Git Bash.)
-
-- `logs/` (chưa có trong repo, sẽ được tạo khi chạy script) — lưu log đầu ra và lỗi biên dịch.
-
-## Hướng dẫn soạn Test Plan và Test Cases (chi tiết)
-
-Mục tiêu: bạn cần nộp một Test Plan đầy đủ (dựa trên `Test_Plan_Template.dotx`) và một bộ Test Cases có thể thực thi/ mô tả rõ ràng. Dưới đây là các phần cần có và ví dụ mẫu.
-
-1) Test Plan (nên có các mục):
-	- Giới thiệu (Project/Module under test)
-	- Scope (phạm vi kiểm thử)
-	- Mục tiêu kiểm thử
-	- Môi trường test (OS, compiler, phiên bản tool)
-	- Tài nguyên (người thực hiện, thời gian, tool)
-	- Test approach (Unit, Integration, System, Regression)
-	- Test cases & traceability (bảng mapping giữa yêu cầu và test cases)
-	- Criteria (entry/exit criteria)
-	- Schedule
-
-2) Test Case (một mẫu chi tiết để nhân rộng):
-
-	- ID: TC-L1-001
-	- Module: baia.cpp
-	- Tiêu đề: Kiểm tra kết quả đúng với input hợp lệ A
-	- Tiền đề: Chương trình biên dịch thành công, không có file bị hỏng
-	- Input: mô tả cụ thể (ví dụ: một dòng chứa số nguyên 5)
-	- Các bước thực hiện:
-		1. Biên dịch `baia.cpp` bằng lệnh: `g++ -std=c++17 -O2 -o baia.exe baia.cpp`
-		2. Chạy `./baia.exe` và nhập `5`
-	- Kết quả mong đợi: (mô tả kết quả hợp lệ, ví dụ: in ra `Kết quả: 120`)
-	- Kết quả thực tế: (điền khi chạy thực nghiệm)
-	- Trạng thái: Pass / Fail
-
-Lặp lại cho mỗi file `.cpp`. Với các test case negative/boundary, chuẩn bị input không hợp lệ (chuỗi thay vì số, số âm, số quá lớn,...).
-
-## Hướng dẫn tạo báo cáo nộp (gợi ý)
-
-1. Điền `Test_Plan_Template.dotx` (trong `DeTai/DeTai_GiaiDoan1/`) với các thông tin cụ thể cho hệ thống bạn kiểm thử.
-2. Tạo folder `results/` và lưu:
-	 - `Test_Plan.docx` (hoặc .pdf)
-	 - `Test_Cases.xlsx` hoặc `Test_Cases.docx`
-	 - Kết quả chạy: `logs/*.log`, ảnh chụp màn hình output `screenshots/`.
-3. Xuất các sơ đồ từ `.drawio` sang `png` và nhúng vào báo cáo.
-
-## Script tự động (đã thêm)
-
-File: `scripts/run_lab1_tests.sh`
-
-- Mục đích: biên dịch từng file `.cpp` trong `lab1/`, lưu lỗi biên dịch vào `logs/<file>.build.err` và output chạy vào `logs/<file>.log`.
-- Chạy script (trên Windows dùng Git Bash hoặc WSL):
+**Cách dùng:**
 
 ```bash
+# Cấp quyền thực thi (lần đầu)
 chmod +x scripts/run_lab1_tests.sh
+
+# Chạy script
 ./scripts/run_lab1_tests.sh
+
+# Xem kết quả
+ls logs/
+cat logs/baia.log
 ```
 
-Lưu ý: script sử dụng `g++` trong PATH; nếu bạn dùng MinGW tại vị trí khác, hãy sửa PATH hoặc thay `g++` bằng đường dẫn đầy đủ.
+### 4. Mở Jupyter Notebook
 
-## Gợi ý CI (tự động trên GitHub Actions)
+```bash
+# Cài đặt Jupyter (nếu chưa có)
+pip install jupyter
 
-Bạn có thể thêm workflow đơn giản `.github/workflows/ci.yml` thực hiện các bước:
+# Khởi động Jupyter
+jupyter notebook
 
-- Setup MinGW/gcc (Windows) hoặc dùng Ubuntu runner
-- Biên dịch tất cả file `.cpp` và chạy các executable (hoặc chỉ compile để kiểm tra build)
-- Upload logs/artifacts
+# Hoặc dùng VS Code với Jupyter extension
+```
 
-Nếu bạn muốn, tôi có thể tạo file workflow mẫu cho repo này.
+### 5. Chỉnh sửa file Draw.io
 
-## Ghi chú bảo quản mã nguồn
+**Trong VS Code:**
+1. Cài extension: Draw.io Integration
+2. Click đúp vào file `.drawio`
+3. Chỉnh sửa và lưu
 
-- Xóa file nhị phân (`*.exe`) trước khi commit nếu không cần thiết.
-- Đưa test case chi tiết vào `lab1/TestCases/` hoặc `tests/` để dễ chạy tự động.
+**Export sang ảnh:**
+1. Mở file `.drawio` trong VS Code/web
+2. File > Export as > PNG/SVG
+3. Chèn vào Word/báo cáo
 
-## Tóm tắt thay đổi tôi đã thực hiện
+---
 
-- Soạn và chuẩn hóa `README.md` thành bản mô tả toàn diện (file này).
-- Thêm script `scripts/run_lab1_tests.sh` để tự động build/run lab1 và thu log.
+## 🎯 Chiến lược kiểm thử
+
+### 1. Mục tiêu kiểm thử
+
+- ✅ **Functional Testing**: Xác minh chức năng hoạt động đúng
+- ✅ **White-box Testing**: Bao phủ code (statement, branch, path)
+- ✅ **Black-box Testing**: Kiểm thử dựa trên yêu cầu
+- ✅ **Boundary Testing**: Kiểm thử giá trị biên
+- ✅ **Negative Testing**: Kiểm thử trường hợp bất thường
+
+### 2. Phân loại kiểm thử
+
+| Loại | Mô tả | Áp dụng |
+|------|-------|---------|
+| **Unit Testing** | Kiểm thử từng hàm/module | Lab 1: các hàm f1(), f2(), findMax() |
+| **Integration Testing** | Kiểm thử tích hợp các module | Đề tài chính |
+| **System Testing** | Kiểm thử toàn hệ thống | Đề tài chính |
+| **Regression Testing** | Kiểm thử hồi quy sau sửa lỗi | Sau khi fix bug trong baie.cpp |
+
+### 3. Test Plan Structure (theo IEEE 829)
+
+```
+1. Test Plan Identifier
+2. Introduction
+3. Test Items (Features to be tested)
+4. Features NOT to be tested
+5. Approach (Test Strategy)
+6. Item Pass/Fail Criteria
+7. Suspension & Resumption Criteria
+8. Test Deliverables
+9. Test Environment
+10. Responsibilities
+11. Staffing & Training
+12. Schedule
+13. Risks & Contingencies
+14. Approvals
+```
+
+### 4. Mẫu Test Case
+
+```
+TC-ID: TC-L1-001
+Title: Kiểm tra f1() với x > 10
+Module: baia.cpp
+Priority: High
+Pre-conditions: Chương trình biên dịch thành công
+Test Data: x = 11
+Steps:
+  1. Biên dịch: g++ -o baia.exe baia.cpp
+  2. Chạy: ./baia.exe
+  3. Nhập input: 11
+Expected Result: f1(11) = 22
+Actual Result: [Điền sau khi test]
+Status: PASS/FAIL
+```
+
+### 5. Coverage Metrics
+
+- **Statement Coverage**: 100% (mọi dòng lệnh được thực thi)
+- **Branch Coverage**: 100% (mọi nhánh if/else được test)
+- **Path Coverage**: Tất cả đường đi độc lập
+- **Condition Coverage**: Tất cả điều kiện logic (AND, OR)
+
+### 6. Bug Report Template
+
+```
+Bug ID: BUG-001
+Title: findMax() trả về 0 khi tất cả số âm
+Severity: High
+Priority: High
+Module: baie.cpp, function findMax()
+Steps to Reproduce:
+  1. Gọi findMax(-5, -2, -9)
+  2. Quan sát kết quả
+Expected: -2
+Actual: 0
+Root Cause: Biến max khởi tạo = 0 thay vì num1
+Fix: int max = num1;
+Status: OPEN/FIXED/CLOSED
+```
+
+---
+
+## ✅ Checklist nộp bài
+
+### 📋 Đề tài chính
+
+- [ ] Hoàn thiện `DeTai_GiaiDoan1_TruongPhuKiet_3122411109.docx`
+- [ ] Export tất cả sơ đồ `.drawio` sang PNG/SVG
+- [ ] Hoàn thiện Test Plan từ `Test_Plan_Template.dotx`
+- [ ] Tạo bộ Test Cases đầy đủ (Excel/Word)
+- [ ] Chạy và lưu screenshots kết quả test
+- [ ] Viết báo cáo tổng hợp (PDF)
+
+### 🧪 Lab 1
+
+- [ ] Biên dịch thành công tất cả file `.cpp`
+- [ ] Chạy script `run_lab1_tests.sh` và kiểm tra logs
+- [ ] Điền kết quả vào `Lab1_VV_TestCases.docx`
+- [ ] Xác định và báo cáo lỗi trong `baie.cpp`
+- [ ] Đề xuất fix và test lại
+- [ ] Nộp mã nguồn + báo cáo
+
+### 📐 Lab 2, 3, 4, 5
+
+- [ ] Hoàn thiện file `.docx` báo cáo
+- [ ] Export sơ đồ `.drawio` sang ảnh
+- [ ] Nộp file theo đúng format: `LabX_PTTKHT_TruongPhuKiet_3122411109`
+
+### 📋 Bài tập 6, 7
+
+- [ ] Hoàn thiện BT06: Decision Table, State Transition, Pairwise
+- [ ] Hoàn thiện BT07: Process Testing (Excel)
+- [ ] Kiểm tra format file trước khi nộp
+
+### 🔧 Kỹ thuật
+
+- [ ] Xóa file nhị phân (*.exe) trước khi commit (tùy chọn)
+- [ ] Kiểm tra code không có lỗi biên dịch
+- [ ] Đảm bảo tất cả đường dẫn đúng trên Windows
+- [ ] Test script `run_lab1_tests.sh` trên Git Bash
+
+---
+
+## 📊 Thống kê Repository
+
+| Loại file | Số lượng | Mục đích |
+|-----------|----------|----------|
+| `.cpp` | 8 | Mã nguồn C++ |
+| `.docx` | 15+ | Báo cáo, tài liệu |
+| `.drawio` | 6+ | Sơ đồ thiết kế |
+| `.xlsx` | 3+ | Bảng Use Case, Test Cases |
+| `.ipynb` | 6+ | Jupyter Notebooks |
+| `.pdf` | 4+ | Tài liệu tham khảo |
+| `.sh` | 1 | Script tự động |
+
+---
+
+## 🔧 Hướng dẫn nâng cao
+
+### 1. Tích hợp GitHub Actions (CI/CD)
+
+Tạo file `.github/workflows/ci.yml`:
+
+```yaml
+name: C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install g++
+        run: sudo apt-get install -y g++
+      - name: Build all cpp files
+        run: |
+          cd lab1
+          for file in *.cpp; do
+            g++ -std=c++17 -O2 -o "${file%.cpp}" "$file"
+          done
+      - name: Run tests
+        run: chmod +x scripts/run_lab1_tests.sh && ./scripts/run_lab1_tests.sh
+```
+
+### 2. Unit Testing với Google Test
+
+```bash
+# Cài đặt Google Test
+git clone https://github.com/google/googletest.git
+cd googletest && mkdir build && cd build
+cmake .. && make && sudo make install
+
+# Tạo test file
+# test_baia.cpp:
+#include <gtest/gtest.h>
+extern int f1(int x);
+
+TEST(F1Test, BoundaryTest) {
+    EXPECT_EQ(f1(9), -9);
+    EXPECT_EQ(f1(10), -10);
+    EXPECT_EQ(f1(11), 22);
+}
+
+# Biên dịch và chạy
+g++ -std=c++17 test_baia.cpp baia.cpp -lgtest -lgtest_main -pthread -o test
+./test
+```
+
+### 3. Static Analysis với cppcheck
+
+```bash
+# Cài đặt cppcheck
+sudo apt-get install cppcheck  # Linux
+# hoặc download từ cppcheck.net
+
+# Phân tích code
+cppcheck --enable=all --inconclusive lab1/*.cpp
+```
+
+---
+
+## 📚 Tài liệu tham khảo
+
+### Sách & Tài liệu
+
+1. **Software Testing** - Ron Patton
+2. **The Art of Software Testing** - Glenford J. Myers
+3. **IEEE 829-2008** - Standard for Software Test Documentation
+4. Slides bài giảng: `KTPM - Chuong 4 - Kiem thu hop den.pdf`
+
+### Links hữu ích
+
+- [Draw.io](https://app.diagrams.net/)
+- [Google Test Documentation](https://google.github.io/googletest/)
+- [C++ Reference](https://en.cppreference.com/)
+- [MinGW-w64](https://www.mingw-w64.org/)
+
+---
+
+## 🤝 Đóng góp & Cải tiến
+
+### Các cải tiến đã thực hiện
+
+- ✅ Tạo script tự động `run_lab1_tests.sh`
+- ✅ Chuẩn hóa cấu trúc thư mục
+- ✅ Viết README chi tiết
+- ✅ Thêm VS Code tasks cho biên dịch C++
+
+### Các cải tiến dự kiến
+
+- [ ] Thêm GitHub Actions workflow
+- [ ] Tích hợp Google Test
+- [ ] Tạo coverage report tự động
+- [ ] Thêm test cases tự động cho tất cả labs
+
+---
+
+## 📞 Liên hệ
+
+**Tác giả:** Trương Phú Kiệt  
+**MSSV:** 3122411109  
+**Email:** [truongphukiet@sgu.edu.vn]  
+**GitHub:** [Kietnehi/sgu25_KTPM](https://github.com/Kietnehi/sgu25_KTPM)
+
+---
+
+## 📄 License
+
+Repository này được sử dụng cho mục đích học tập tại Trường Đại học Sài Gòn.  
+© 2025 Trương Phú Kiệt - All Rights Reserved
+
+---
+
+
 
 
