@@ -116,6 +116,10 @@ Repository phục vụ môn **Kiểm thử phần mềm**, lưu trữ:
 
 ### 🎓 Về Repository này
 
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzhraWN4ZjJtZm10YXk0N3ZqbjZiOHBzZWZzdXl5eDZ4dzVna2pidSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/S8VTGrBPjwo7GnIGiE/200.webp" alt="Software Testing" width="200"/>
+
+*Software Testing - Finding bugs before users do! 🐛🔍*
+
 </div>
 
 Repository **`sgu25_KTPM`** là kho lưu trữ **toàn diện và chuyên nghiệp** cho môn **Kiểm thử phần mềm (Software Testing)** tại Trường Đại học Sài Gòn. Được xây dựng với mục tiêu học tập và thực hành sâu các kỹ thuật kiểm thử phần mềm hiện đại.
