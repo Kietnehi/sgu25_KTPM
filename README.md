@@ -50,8 +50,8 @@
 <tr>
 <td><strong>🔧 Ngôn ngữ</strong></td>
 <td>C++17, Python 3.8+</td>
-<td><strong>📊 Tổng bài tập</strong></td>
-<td>5 Labs + 7 Bài tập + Đề tài chính</td>
+<td><strong>🎓 Khoa</strong></td>
+<td>Khoa Công nghệ Thông tin</td>
 </tr>
 </table>
 
