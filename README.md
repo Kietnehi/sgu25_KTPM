@@ -45,7 +45,7 @@
 <td><strong>👨‍🏫 Giảng viên</strong></td>
 <td>TS. Đỗ Như Tài</td>
 <td><strong>📅 Năm học</strong></td>
-<td>2024-2025 (Học kỳ 1)</td>
+<td>2025-2026 (Học kỳ 1)</td>
 </tr>
 <tr>
 <td><strong>🔧 Ngôn ngữ</strong></td>
