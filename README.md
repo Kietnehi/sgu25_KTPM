@@ -71,7 +71,8 @@ Repository phục vụ môn **Kiểm thử phần mềm**, lưu trữ:
 
 ### 🚀 Tổng quan Repository - Quick Demo
 
-<img src="https://s4.ezgif.com/tmp/ezgif-41214f03ef509e65.gif" alt="Repository Overview Demo" width="900"/>
+<!-- <img src="https://s4.ezgif.com/tmp/ezgif-41214f03ef509e65.gif" alt="Repository Overview Demo" width="900"/> -->
+<img src="./output.gif" alt="Repository Overview Demo" width="900"/>
 
 *Video demo tổng quan: Cấu trúc repository, các Labs, Bài tập, và tính năng chính của sgu25_KTPM*
 
